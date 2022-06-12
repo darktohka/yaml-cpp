@@ -9,6 +9,9 @@
 set_and_check(YAML_CPP_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
 set_and_check(YAML_CPP_LIBRARY_DIR "@PACKAGE_CMAKE_INSTALL_LIBDIR@")
 
+# Are we building shared libraries?
+set(YAML_BUILD_SHARED_LIBS "@PACKAGE_YAML_BUILD_SHARED_LIBS@")
+
 # Our library dependencies (contains definitions for IMPORTED targets)
 include(@PACKAGE_CONFIG_EXPORT_DIR@/yaml-cpp-targets.cmake)
 
