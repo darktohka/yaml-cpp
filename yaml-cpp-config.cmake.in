@@ -1,11 +1,13 @@
 # - Config file for the yaml-cpp package
 # It defines the following variables
 #  YAML_CPP_INCLUDE_DIR - include directory
-#  YAML_CPP_LIBRARIES    - libraries to link against
+#  YAML_CPP_LIBRARY_DIR - directory containing libraries
+#  YAML_CPP_LIBRARIES   - libraries to link against
 
 @PACKAGE_INIT@
 
 set_and_check(YAML_CPP_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set_and_check(YAML_CPP_LIBRARY_DIR "@PACKAGE_CMAKE_INSTALL_LIBDIR@")
 
 # Our library dependencies (contains definitions for IMPORTED targets)
 include(@PACKAGE_CONFIG_EXPORT_DIR@/yaml-cpp-targets.cmake)
